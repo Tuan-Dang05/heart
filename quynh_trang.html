@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>love quynhtrang</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="./background.css" rel="stylesheet" type="text/css">
+        <link href="./trieu.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="shortcut icon" type="image/jpg" href="./img/icon.jpg"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital@1&family=Edu+SA+Beginner&family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       .dashboard {
+        display: block; 
+        top:0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 420px;
+        height: 100%;
+        max-height: 710px;
+        background-image: url(./img/bg.jpg);
+
+        background-size: cover;
+    }
+    .dashboard h3{
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 22px;
+    margin-bottom: -40px;
+    background: linear-gradient(to right, #f80101 0%, #0925fc 100%); 
+    font-family: 'Pacifico', cursive;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* HEART TO */
+  canvas {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+      #pinkboard {
+        position: relative;
+        margin: auto;
+        height: 500px;
+        width: 500px;
+        margin-top: -110px;
+        margin-left: -40px;
+        animation: animate 1.3s infinite;
+      }
+       
+      #pinkboard:before, #pinkboard:after {
+        content: '';
+        position: absolute;
+        background: #FF5CA4;
+        width:100px;
+        height: 160px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+      }
+       
+      #pinkboard:before {
+        left: 100px;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25),
+                    0 10px 10px rgba(0,0,0,0.22);
+      }
+       
+      #pinkboard:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+      }
+       
+      @keyframes animate {
+        0% {
+          transform: scale(1);
+        }
+        30% {
+          transform: scale(.8);
+        }
+        60% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .btn {
+        color: #f30404;
+        border: 1px solid cyan;
+        margin-top: 26px;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        margin-left: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 7px;
+        background-image: linear-gradient(to bottom, rgb(203, 209, 197) 0%, rgb(60, 250, 250) 100%), linear-gradient(to bottom, red 0%, blue 100%);
+
+      }
+      .btn2 {
+        color: #32edfe;
+        border: 1px solid cyan;
+        margin-top: 27px;
+        display: block;
+        position: absolute;
+        z-index: 1;
+        margin-left: 380px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        padding-top: 7px;
+        background-image: linear-gradient(to bottom, rgb(58, 67, 49) 0%, rgb(250, 92, 60) 100%), linear-gradient(to bottom, red 0%, blue 100%);
+
+      }
+      .btn,.btn2{
+        animation: float 5s ease-in-out infinite;
+    }
+    @keyframes float {
+        0%{
+            box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+            transform: translateY(0px);
+        }
+        50%{
+            box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+            transform: translateY(-8px);
+        }
+        100%{
+            box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.6);
+            transform: translateY(0px);
+        }
+        
+    }
+      
+    </style>
+    <body>
+          <section class="stars-container">
+           
+            <div class="container">
+              <div id="stars"></div>
+              <div id="stars2"></div>
+              <div id="stars3"></div>
+              <div class="row">
+                <div class="col-sm-6 col-xs-12"></div>
+              </div>
+              
+            </div>
+            <div class="dashboard">
+              <a href="./index2.html" target="_self">
+                <i class="fas fa-heartbeat btn" style="position: fixed;"></i>
+              </a>
+              <a href="./index3.html" target="_self">
+                <i class="fas fa-envelope btn2"></i>
+              </a>
+                <h3> From QuynhTrang With Love</h3>
+                <canvas id="pinkboard"></canvas>
+                <div id="clock-box">
+                    <div id="clock">
+                      <p>0</p>
+                      <h4>Ngày</h4>
+                    
+                        </a>
+                      <!-- <div class="run-test" >
+                        <h1>
+                          <a href="" class="typewrite" data-period="2000" data-type='[ "Dear, my darling!!", "Nếu cuộc đời chỉ toàn điều dối trá,", "Mình về nhà,", "đóng cửa và thương nhau.","....","Cái tên ấy...","dù bao lâu đi nữa","thì ở mỗi lần vô tình nhìn thấy,","hay nghe người khác nhắc đến,","trái tim đều sẽ bất giác mà rung lên.","....","Anh Yêu Em" ]' style="color: #96ee1c;text-decoration: none;">
+                            <span class="wrap"></span>
+                          </a>
+                        </h1>
+                      </div> -->
+                      
+                      <div class="heart1">
+                        <img class="img" src="./img/trieu.png" alt="Tuan_dang" />
+                        <!-- <h4 class="tuandang">Tún 🍉</h4> -->
+                        <div class="tuandang">Cò ❤</div>
+                        <i id="mars" class="fa fa-mars"></i>
+                        <span id="tuan_dang">
+                          00
+                        </span>
+                        <span class="song_tu">
+                            ♐️ Nhân Mã
+                        </span>
+                        <i id="venus" class="fas fa-venus"></i>
+                        <span id="thuy_duong">
+                          00
+                        </span>
+                        <span class="bo_cap">
+                            ♓️ Song Ngư
+                         </span>
+                        <canvas id="pinkboard2" >
+                          
+                        </canvas>
+
+                             </div>
+                      <div class="heart2">
+                        
+                      <img class="img2" src="./img/trang.png" alt="Thuy_Duong" />
+                      <div class="thuyduong">Thỏ ❤️</div>
+                      
+                      <canvas id="pinkboard3"></canvas>
+                      
+                      </div>
+                      
+                      <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+                        <g class="pathdraw" id="Layer_1">
+                  <path id="svg_1" d="m190.5,288.2l42.5,-0.2l5,-12l7,12l5,0l8,-48l12,80l10,-33l13,0l5,-7l3,0l5,-10l5,17l42.5,0," />
+                        </g>
+                        
+                    </svg>
+
+                  </div>
+                  
+            </div>
+          </div>
+          <div class="bg">
+            <p>Đồng Hồ Been Love Memory</p>
+            <div class="line"></div>
+            <div class="countup" id="countup1">
+                <!-- năm -->
+                <span class="timeel years" style="color: rgb(6, 9, 0);">00</span>
+                <span class="timeel months" style="color: rgb(0, 242, 255);">00</span>
+                <span class="timeel weeks" style="color: rgb(246, 36, 43);">00</span>
+                <span class="timeel days" style="color: rgb(255, 255, 0);">00</span>
+                <span class="timeel hours" style="color: rgb(255, 0, 238);">00</span>
+                <span class="timeel minutes" style="color: rgb(255, 174, 0);">00</span>
+                <span class="timeel seconds" style="color: rgb(255, 255, 255);">00</span>
+            <br/>
+                <span class="timeel timeRefYears" style="color: rgb(0, 0, 0); margin-left: 33px;">năm</span>
+                <!-- tháng -->
+                <span class="timeel timeRefMonths" style="color: rgb(0, 242, 255); margin-left: 20px;">tháng</span>
+                <!-- tuần -->
+                <span class="timeel timeRefWeeks" style="color: rgb(246, 36, 43); margin-left: 14px;">tuần</span>
+                <!-- ngày -->
+                <span class="timeel timeRefDays" style="color: rgb(255, 255, 0); margin-left: 18px;">ngày</span>
+                <!-- giờ -->
+                <span class="timeel timeRefHours" style="color: rgb(255, 0, 238); margin-left: 29px;">giờ</span>
+                <!-- phút -->
+                <span class="timeel timeRefMinutes" style="color: rgb(255, 174, 0); margin-left: 30px;">phút</span>
+                <!-- giây -->
+                <!-- <p style="color: rgb(255, 255, 255); margin-left: 410px; margin-top: -15px;"> giây</p> -->
+                <span class="timeel timeRefSeconds"><p style="color: rgb(255, 255, 255); margin-left: 340px; margin-top: -23px;"> giây</p></span>
+            </div>
+            <h4 class="fil" > ❤️ 4/8/2022 ❤️</h4>
+          </div>
+          </section>
+
+            
+            <script src="./ngiu.js"></script>
+            <script src="./heart.js"></script>
+            <script src="./heart2.js"></script>
+            <script src="./heart3.js"></script>
+    </body>
+<script>
+   window.onload = function() {
+            // Month Day, Year Hour:Minute:Second, id-of-element-container
+            countUpFromTime("Aug 4, 2022 00:00:00", 'countup1'); // ****** Change this line!
+          };
+          function countUpFromTime(countFrom, id) {
+            countFrom = new Date(countFrom).getTime();
+          
+            var now = new Date(),
+                countFrom = new Date(countFrom),
+                timeDifference = (now - countFrom);
+                
+            var secondsInADay = 60 * 60 * 1000 * 24, // ( 1 ngày = 24 giờ * 60 phút * 60 giây * 1000ms) 86.400
+                secondsInAHour = 60 * 60 * 1000;     // ( 1 giờ = 60 phút * 60 giây * 1000ms) 3600
+            years = Math.floor(timeDifference / (secondsInADay * 365))
+            months = Math.floor(timeDifference / (secondsInADay * 31)) //2592000s
+            weeks = Math.floor(timeDifference  / (secondsInADay * 7)); 
+            days = Math.floor(timeDifference / (secondsInADay) + 1);
+            hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1); //24
+            mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
+            secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
+            if (months > 12) {
+              months = Math.floor(timeDifference / (secondsInADay * 31)) - 12;
+            } 
+            if (weeks > 4){
+              weeks = Math.floor(timeDifference / (secondsInADay * 7)) % 4;
+            }
+            if (days > 31){
+              days = Math.floor(timeDifference / (secondsInADay) + 1)%31;
+            }
+       
+            
+            var idEl = document.getElementById(id);
+            idEl.getElementsByClassName('years')[0].innerHTML = years;
+            idEl.getElementsByClassName('months')[0].innerHTML = months;
+            idEl.getElementsByClassName('weeks')[0].innerHTML = weeks;
+            idEl.getElementsByClassName('days')[0].innerHTML = days;
+            idEl.getElementsByClassName('hours')[0].innerHTML = hours;
+            idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
+            idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
+          
+            clearTimeout(countUpFromTime.interval);
+            countUpFromTime.interval = setTimeout(function(){ countUpFromTime(countFrom, id); }, 1000);
+            
+          }
+</script>
+</html>
